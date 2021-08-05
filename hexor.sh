@@ -18,7 +18,7 @@
 
 # Ensure no syntax errors e.g. $((0x ^ 0x12))
 a_b=$((${#a}-${#b}))
-[ $a_b -gt 0 ] && printf -v b $b%0$((${#a}-${#b}))d
+[ $a_b -gt 0 ] && printf -v b $b%0${a_b}d
 
 for ((i=0; i < ${#a}; i+=d_moji)) {
  printf %0${d_moji}x $((
