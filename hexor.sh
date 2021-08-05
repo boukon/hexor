@@ -5,6 +5,7 @@
 # 用法、
 # $ hexor aaA0fa 00bf34 4
 # aa1f00ce$
+#
 a=$1; b=$2
 [ "$3" ] && d_moji=$3 || d_moji=2
 a_b=$((${#a}-${#b}))
