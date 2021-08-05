@@ -20,7 +20,7 @@
 a_b=$((${#a}-${#b}))
 [ $a_b -gt 0 ] && printf -v b $b%0$((${#a}-${#b}))d
 
-for ((i=0; i < ${#a}; i+=d_moji)) { # odd-byte
+for ((i=0; i < ${#a}; i+=d_moji)) {
  printf %0${d_moji}x $((
   0x${a:$i:$d_moji} ^ 0x${b:$i:$d_moji}
  ))
